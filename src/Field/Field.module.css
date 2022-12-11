@@ -1,0 +1,37 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.field label {
+  display: block;
+  font-weight: 500;
+}
+
+.field input {
+  padding: 10px;
+}
+
+.field .message {
+  font-size: 0.875rem;
+}
+
+.field .message.hidden {
+  visibility: hidden;
+}
+
+.field .message.hidden::after {
+  content: '';
+  display: inline-block;
+}
+
+.field input[data-touched]:invalid {
+  outline-color: coral;
+  outline-width: 1px;
+  outline-style: solid;
+}
+
+.field input[data-touched]:invalid + .message {
+  color: coral;
+}
